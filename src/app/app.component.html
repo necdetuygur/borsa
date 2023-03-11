@@ -1,8 +1,8 @@
 <div class="container" style="max-width: 550px">
-  <h2 class="text-center mb-5">Angular Login with Google</h2>
-  <div *ngIf="!isLoggedin">
+  <div *ngIf="!isLoggedin" style="color-scheme: light">
     <asl-google-signin-button type="standard"></asl-google-signin-button>
   </div>
+
   <div *ngIf="isLoggedin">
     <div>
       <img [src]="socialUser.photoUrl" alt="" />
@@ -37,7 +37,7 @@
         readonly
       />
     </div>
-    <button type="button" (click)="logOut()" class="btn btn-primary">
+    <button type="button" (click)="logOut()" class="btn btn-primary mt-1">
       Log Out
     </button>
   </div>

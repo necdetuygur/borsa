@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
+import {
+  GoogleLoginProvider,
+  SocialAuthService,
+  SocialUser,
+} from '@abacritt/angularx-social-login';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
