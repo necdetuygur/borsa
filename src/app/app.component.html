@@ -1,8 +1,9 @@
-<div class="container" style="max-width: 550px">
+<div class="container-fluid mt-1">
+  <app-comment></app-comment>
+
   <div *ngIf="!isLoggedin" style="color-scheme: light">
     <asl-google-signin-button type="standard"></asl-google-signin-button>
   </div>
-
   <div *ngIf="isLoggedin">
     <div>
       <img [src]="socialUser.photoUrl" alt="" />

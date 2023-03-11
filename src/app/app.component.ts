@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import {
-  GoogleLoginProvider,
   SocialAuthService,
   SocialUser,
 } from '@abacritt/angularx-social-login';

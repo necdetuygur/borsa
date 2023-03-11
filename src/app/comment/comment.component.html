@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">Yorumlar</div>
+      <div class="card-body p-0">
+        <div *ngFor="let comment of comments">
+          {{ comment.Email }}:
+          {{ comment.Content }}
+          <span class="float-end">
+            {{ comment.DateTime }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">Yorum Ekle</div>
+      <div class="card-body p-1">
+        <textarea
+          class="form-control"
+          rows="3"
+          style="height: 126px"
+          (change)="commentTxtChange($event)"
+          (keyup)="commentTxtChange($event)"
+          (keydown)="commentTxtChange($event)"
+          [value]="comment"
+        ></textarea>
+      </div>
+      <div class="card-footer p-1">
+        <input
+          type="button"
+          value="Yorum Yap"
+          class="btn btn-primary float-end"
+          (click)="submitComment()"
+        />
+      </div>
+    </div>
+  </div>
+</div>
