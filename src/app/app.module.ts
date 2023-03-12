@@ -15,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { DetailComponent } from './components/detail/detail.component';
+import { TradingviewComponent } from './components/tradingview/tradingview.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { DetailComponent } from './components/detail/detail.component';
     HeaderComponent,
     HomeComponent,
     DetailComponent,
+    TradingviewComponent,
   ],
   imports: [
     BrowserModule,
