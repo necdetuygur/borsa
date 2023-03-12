@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Borsa</a>
+    <a class="navbar-brand" routerLink="/">Borsa</a>
     <div class="d-flex">
-      <div class="nav-item dropdown">
+      <div class="nav-item dropdown" *ngIf="authService.Get().email !== ''">
         <a
           class="nav-link dropdown-toggle"
           data-bs-toggle="dropdown"
@@ -20,15 +20,25 @@
           {{ authService.Get().lastName }}
         </a>
         <div class="dropdown-menu dropdown-menu-end">
-          <a class="dropdown-item" href="#">
-            {{ authService.Get().email }}
-          </a>
+          <a class="dropdown-item" routerLink="/profile"> Profil </a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" (click)="authService.LogOut()">
+          <a
+            class="dropdown-item"
+            (click)="authService.LogOut()"
+            routerLink="/login"
+          >
             Çıkış Yap
           </a>
         </div>
       </div>
+      <a
+        *ngIf="!(authService.Get().email !== '')"
+        routerLink="/login"
+        routerLinkActive="router-link-active"
+        class="nav-link"
+      >
+        Giriş Yap
+      </a>
     </div>
   </div>
 </nav>

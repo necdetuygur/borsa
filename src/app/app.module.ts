@@ -12,6 +12,9 @@ import { CommentComponent } from './components/comment/comment.component';
 import { GoogleLoginComponent } from './components/google-login/google-login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { HeaderComponent } from './components/header/header.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/home/home.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +23,15 @@ import { HeaderComponent } from './components/header/header.component';
     GoogleLoginComponent,
     ProfileComponent,
     HeaderComponent,
+    HomeComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     SocialLoginModule,
     GoogleSigninButtonModule,
+    AppRoutingModule,
   ],
   providers: [
     {

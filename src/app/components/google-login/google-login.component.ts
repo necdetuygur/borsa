@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { SocialAuthService } from '@abacritt/angularx-social-login';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -10,11 +11,13 @@ import { AuthService } from 'src/app/services/auth.service';
 export class GoogleLoginComponent {
   constructor(
     private socialAuthService: SocialAuthService,
-    public authService: AuthService
+    public authService: AuthService,
+    private router: Router
   ) {}
   ngOnInit() {
     this.socialAuthService.authState.subscribe((user) => {
       this.authService.Set(user);
+      this.router.navigateByUrl('/profile');
     });
   }
 }
