@@ -17,7 +17,9 @@ export class GoogleLoginComponent {
   ngOnInit() {
     this.socialAuthService.authState.subscribe((user) => {
       this.authService.Set(user);
-      this.router.navigateByUrl('/profile');
+      if (this.authService.Get().email !== '') {
+        this.router.navigateByUrl('/profile');
+      }
     });
   }
 }
