@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import axios from 'axios';
 import * as moment from 'moment';
+import { Comment } from '../../models/comment';
 
 @Component({
   selector: 'app-comment',
@@ -25,12 +26,15 @@ export class CommentComponent {
     this.comments = res.data;
   }
   async submitComment() {
-    await axios.post(this.API_URL + '/Comment', {
+    const data: Comment = {
+      NameSurname: 'Necdet UYGUR',
+      Picture: 'Necdet UYGUR',
       Email: 'necdet.uygur@gmail.com',
       Code: 'SAHOL',
       Content: this.comment,
       DateTime: moment().format(),
-    });
+    };
+    await axios.post(this.API_URL + '/Comment', data);
     this.getComments();
     this.comment = '';
   }

@@ -1,8 +1,8 @@
 <div class="row">
   <div class="col-md-8">
     <div class="card">
-      <div class="card-header">Yorumlar</div>
-      <div class="card-body p-0">
+      <div class="card-header p-1">Yorumlar</div>
+      <div class="card-body p-1">
         <div *ngFor="let comment of comments">
           {{ comment.Email }}:
           {{ comment.Content }}
@@ -15,16 +15,17 @@
   </div>
   <div class="col-md-4">
     <div class="card">
-      <div class="card-header">Yorum Ekle</div>
+      <div class="card-header p-1">Yorum Ekle</div>
       <div class="card-body p-1">
         <textarea
-          class="form-control"
+          class="form-control p-1"
           rows="3"
           style="height: 126px"
           (change)="commentTxtChange($event)"
           (keyup)="commentTxtChange($event)"
           (keydown)="commentTxtChange($event)"
           [value]="comment"
+          placeholder="Yorumunuz..."
         ></textarea>
       </div>
       <div class="card-footer p-1">

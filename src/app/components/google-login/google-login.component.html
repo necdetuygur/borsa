@@ -1,0 +1,5 @@
+<div class="container-fluid mt-1">
+  <div *ngIf="!(authService.Get().email !== '')" style="color-scheme: light">
+    <asl-google-signin-button type="standard"></asl-google-signin-button>
+  </div>
+</div>

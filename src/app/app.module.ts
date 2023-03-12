@@ -8,10 +8,19 @@ import {
   GoogleSigninButtonModule,
   GoogleLoginProvider,
 } from '@abacritt/angularx-social-login';
-import { CommentComponent } from './comment/comment.component';
+import { CommentComponent } from './components/comment/comment.component';
+import { GoogleLoginComponent } from './components/google-login/google-login.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, CommentComponent],
+  declarations: [
+    AppComponent,
+    CommentComponent,
+    GoogleLoginComponent,
+    ProfileComponent,
+    HeaderComponent,
+  ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,

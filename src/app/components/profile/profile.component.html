@@ -1,0 +1,38 @@
+<div *ngIf="authService.Get().email !== ''">
+  <div>
+    
+  </div>
+  <div class="form-group">
+    <label>Ad</label>
+    <input
+      type="text"
+      class="form-control"
+      [value]="authService.Get().firstName"
+      id="firstname"
+      readonly
+    />
+  </div>
+  <div class="form-group">
+    <label>Soyad</label>
+    <input
+      type="text"
+      class="form-control"
+      [value]="authService.Get().lastName"
+      id="lastname"
+      readonly
+    />
+  </div>
+  <div class="form-group mb-2">
+    <label>Email</label>
+    <input
+      type="text"
+      class="form-control"
+      [value]="authService.Get().email"
+      id="email"
+      readonly
+    />
+  </div>
+  <button type="button" (click)="authService.LogOut()" class="btn btn-danger">
+    Çıkış Yap
+  </button>
+</div>
