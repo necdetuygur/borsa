@@ -1,33 +1,76 @@
-<div *ngIf="authService.Get().email !== ''">
-  <div></div>
-  <div class="form-group">
-    <label>Ad</label>
-    <input
-      type="text"
-      class="form-control"
-      [value]="authService.Get().firstName"
-      id="firstname"
-      readonly
-    />
+<div *ngIf="authService.Get().email !== ''" class="row mt-2">
+  <div class="col-md-8">
+    <div class="card text-white bg-dark">
+      <div class="card-header p-1">Yorumlarım</div>
+      <div class="card-body p-0">
+        <table class="table table-bordered table-striped table-hover">
+          <tbody *ngIf="comments.length > 0">
+            <tr *ngFor="let comment of comments">
+              <td>
+                <img
+                  [src]="comment.Picture"
+                  alt=""
+                  style="width: 29px; margin-right: 3px"
+                />
+                {{ comment.NameSurname }}
+              </td>
+              <td>{{ comment.Code }}</td>
+              <td>{{ comment.Content }}</td>
+              <td class="text-end">
+                {{ moment(comment.DateTime).format("LLLL") }}
+              </td>
+            </tr>
+          </tbody>
+          <tbody *ngIf="!(comments.length > 0)">
+            <tr>
+              <td class="text-center p-5">Henüz hiç yorum yapılmamış.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label>Soyad</label>
-    <input
-      type="text"
-      class="form-control"
-      [value]="authService.Get().lastName"
-      id="lastname"
-      readonly
-    />
-  </div>
-  <div class="form-group mb-2">
-    <label>Email</label>
-    <input
-      type="text"
-      class="form-control"
-      [value]="authService.Get().email"
-      id="email"
-      readonly
-    />
+  <div class="col-md-4">
+    <div class="card text-white bg-dark">
+      <div class="card-header p-1">Profil Bilgileri</div>
+      <div class="card-body p-1">
+        <div class="form-group">
+          <label>Profil Resmi</label>
+          <div>
+            <img [src]="authService.Get().photoUrl" alt="" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Ad</label>
+          <input
+            type="text"
+            class="form-control"
+            [value]="authService.Get().firstName"
+            id="firstname"
+            readonly
+          />
+        </div>
+        <div class="form-group">
+          <label>Soyad</label>
+          <input
+            type="text"
+            class="form-control"
+            [value]="authService.Get().lastName"
+            id="lastname"
+            readonly
+          />
+        </div>
+        <div class="form-group mb-2">
+          <label>Email</label>
+          <input
+            type="text"
+            class="form-control"
+            [value]="authService.Get().email"
+            id="email"
+            readonly
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </div>

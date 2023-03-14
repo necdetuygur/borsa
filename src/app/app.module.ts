@@ -17,6 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { TradingviewComponent } from './components/tradingview/tradingview.component';
 import { FilterBistDataPipe } from './pipes/filter-bist-data.pipe';
+import { MyCommentsComponent } from './components/my-comments/my-comments.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FilterBistDataPipe } from './pipes/filter-bist-data.pipe';
     DetailComponent,
     TradingviewComponent,
     FilterBistDataPipe,
+    MyCommentsComponent,
   ],
   imports: [
     BrowserModule,
