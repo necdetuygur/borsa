@@ -8,11 +8,12 @@ export class FilterBistDataPipe implements PipeTransform {
     if (!items || !f1) {
       return items;
     }
+    f1 = f1.toLowerCase();
     return items.filter(
       (item) =>
-        item.Code.toLowerCase().includes(f1.toLowerCase()) ||
-        item.Title.toLowerCase().includes(f1.toLowerCase()) ||
-        item.City.toLowerCase().includes(f1.toLowerCase())
+        item.Code.toLowerCase().includes(f1) ||
+        item.Title.toLowerCase().includes(f1) ||
+        item.City?.toLowerCase().includes(f1)
     );
   }
 }
