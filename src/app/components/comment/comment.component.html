@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-8">
-    <div class="card">
+    <div class="card text-white bg-dark">
       <div class="card-header p-1">Yorumlar</div>
       <div class="card-body p-0">
         <table class="table table-bordered table-striped table-hover">
@@ -30,7 +30,7 @@
     </div>
   </div>
   <div class="col-md-4">
-    <div class="card" *ngIf="authService.Get().email !== ''">
+    <div class="card text-white bg-dark" *ngIf="authService.Get().email !== ''">
       <div class="card-header p-1">Yorum Ekle</div>
       <div class="card-body p-1">
         <div class="mb-2">
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div *ngIf="!(authService.Get().email !== '')">
-      <div class="card">
+      <div class="card text-white bg-dark">
         <div class="card-header p-1">Yorum Yap</div>
         <div class="card-body p-2">
           Yorum yazabilmek için lütfen

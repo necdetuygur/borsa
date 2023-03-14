@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   SocialLoginModule,
   SocialAuthServiceConfig,
@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { TradingviewComponent } from './components/tradingview/tradingview.component';
+import { FilterBistDataPipe } from './pipes/filter-bist-data.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TradingviewComponent } from './components/tradingview/tradingview.compo
     HomeComponent,
     DetailComponent,
     TradingviewComponent,
+    FilterBistDataPipe,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,7 @@ import { TradingviewComponent } from './components/tradingview/tradingview.compo
     SocialLoginModule,
     GoogleSigninButtonModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [
     {
