@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
@@ -21,6 +21,7 @@ import { MyCommentsComponent } from './components/my-comments/my-comments.compon
 import { HisseComponent } from './components/hisse/hisse.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { CommentRowComponent } from './components/comment-row/comment-row.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,12 @@ import { CommentRowComponent } from './components/comment-row/comment-row.compon
     GoogleSigninButtonModule,
     AppRoutingModule,
     FormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [
     {
