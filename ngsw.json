@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1678915485368,
+  "timestamp": 1678916023441,
   "index": "https://necdetuygur.github.io/borsa/index.html",
   "assetGroups": [
     {
@@ -11,19 +11,12 @@
         "ignoreVary": true
       },
       "urls": [
-        "https://necdetuygur.github.io/borsa/1.dc5edd005a96786b.js",
-        "https://necdetuygur.github.io/borsa/31.01c6badc816e3838.js",
-        "https://necdetuygur.github.io/borsa/332.c48783dd59a945f1.js",
-        "https://necdetuygur.github.io/borsa/417.1d514ca96aaeed59.js",
-        "https://necdetuygur.github.io/borsa/534.5f552eb44fcf3964.js",
-        "https://necdetuygur.github.io/borsa/920.567b93db50274699.js",
-        "https://necdetuygur.github.io/borsa/94.df5835034b255ec7.js",
         "https://necdetuygur.github.io/borsa/favicon.ico",
         "https://necdetuygur.github.io/borsa/index.html",
-        "https://necdetuygur.github.io/borsa/main.945d72a23121ef4e.js",
+        "https://necdetuygur.github.io/borsa/main.aec4958690a66c43.js",
         "https://necdetuygur.github.io/borsa/manifest.webmanifest",
         "https://necdetuygur.github.io/borsa/polyfills.8c8b815344061a91.js",
-        "https://necdetuygur.github.io/borsa/runtime.d441b1e3c32c926a.js",
+        "https://necdetuygur.github.io/borsa/runtime.ce85c8f10a74178d.js",
         "https://necdetuygur.github.io/borsa/scripts.6386dd8f07893a30.js",
         "https://necdetuygur.github.io/borsa/styles.d535b69f2b0477ac.css"
       ],
@@ -53,13 +46,6 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "https://necdetuygur.github.io/borsa/1.dc5edd005a96786b.js": "4cd1e796fb1c7825acb5506917ee385af19781b2",
-    "https://necdetuygur.github.io/borsa/31.01c6badc816e3838.js": "ccf9a1b2728f986c1eb1fc5ad46efa645c8a60c6",
-    "https://necdetuygur.github.io/borsa/332.c48783dd59a945f1.js": "aac731fb2be18027252b50adb1120e4907c570e1",
-    "https://necdetuygur.github.io/borsa/417.1d514ca96aaeed59.js": "580e76ce3448d299decd5e558a023ebbf8a7db63",
-    "https://necdetuygur.github.io/borsa/534.5f552eb44fcf3964.js": "3a5fa4c48f96113857b477575d950649ff5933ec",
-    "https://necdetuygur.github.io/borsa/920.567b93db50274699.js": "09cf6527cd9e079d7051ae6636feff223447ef13",
-    "https://necdetuygur.github.io/borsa/94.df5835034b255ec7.js": "cd17373e4a7b39170ec3819dd95d7bcba0ae0046",
     "https://necdetuygur.github.io/borsa/assets/icons/icon-128x128.png": "cb7c4fbf8e7a284e3561f4d04fb3e186e56f9220",
     "https://necdetuygur.github.io/borsa/assets/icons/icon-144x144.png": "e7cc652e8a0c7e1c06ee7e1b68b5c2451f0f0e4e",
     "https://necdetuygur.github.io/borsa/assets/icons/icon-152x152.png": "17183b9c01f25b330dc05451ac238ec6d9dbd742",
@@ -71,11 +57,11 @@
     "https://necdetuygur.github.io/borsa/assets/icons/icon-96x96.png": "7f84174cd6edad5e82d1c0c7163a7af44e979966",
     "https://necdetuygur.github.io/borsa/assets/loading.gif": "1999e2d42b91ef83fbfd19e29b6e7dd4d612a1d3",
     "https://necdetuygur.github.io/borsa/favicon.ico": "1afa9f25cb81f1193a7f6c85d0c3c4f221fd2960",
-    "https://necdetuygur.github.io/borsa/index.html": "458ae824331877a2dcf773eee58251676c15d58a",
-    "https://necdetuygur.github.io/borsa/main.945d72a23121ef4e.js": "73d6f769f915b93991a6f72360843d7184676678",
+    "https://necdetuygur.github.io/borsa/index.html": "215958105eb35002f4d274afce5ca2ebe5f13ddd",
+    "https://necdetuygur.github.io/borsa/main.aec4958690a66c43.js": "fdafbb22aa683b4d534096f8935b50887c48be07",
     "https://necdetuygur.github.io/borsa/manifest.webmanifest": "a721697eb43e551e8521057a4141d49b5e07891c",
     "https://necdetuygur.github.io/borsa/polyfills.8c8b815344061a91.js": "e8b365b2890106ca5fed4defd2d6ee7ebbfad632",
-    "https://necdetuygur.github.io/borsa/runtime.d441b1e3c32c926a.js": "cf6aaaa9a7eadfabbb93ff1e789e0850226bba5f",
+    "https://necdetuygur.github.io/borsa/runtime.ce85c8f10a74178d.js": "a07e8ac0c94c2a4f1ca94532ce134005960c8545",
     "https://necdetuygur.github.io/borsa/scripts.6386dd8f07893a30.js": "33db49da47bbb73a7d4079f4ec8d9f92d374edc9",
     "https://necdetuygur.github.io/borsa/styles.d535b69f2b0477ac.css": "e5bcf139d94b5d10d83686c19d74d9ed7855a041"
   },
