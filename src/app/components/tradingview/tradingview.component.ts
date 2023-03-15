@@ -26,7 +26,7 @@ export class TradingviewComponent {
       hide_top_toolbar: true,
       withdateranges: true,
       range: '1D',
-      hide_side_toolbar: false,
+      hide_side_toolbar: true,
       details: true,
     });
   }
