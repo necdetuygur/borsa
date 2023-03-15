@@ -1,0 +1,14 @@
+<div class="comment">
+  <img [src]="comment.Picture" class="avatar" />
+  <div class="right">
+    <div class="top">
+      <div class="user">{{ comment.NameSurname }}</div>
+      <div class="time">{{ moment(comment.DateTime).format("LLLL") }}</div>
+    </div>
+    <div class="bottom">
+      <div class="content">
+        {{ comment.Content }}
+      </div>
+    </div>
+  </div>
+</div>

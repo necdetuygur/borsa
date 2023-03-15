@@ -48,6 +48,18 @@ export class PortfolioService {
     });
   }
 
+  public async GetPrice(kod: string) {
+    const data = (
+      await (
+        await axios.get('https://hisse.vercel.app/?q=' + kod)
+      ).data
+    ).split('|');
+    return {
+      fiyat: data[0],
+      yuzde: data[1],
+    };
+  }
+
   public Remove(id: number) {
     if (!confirm('Emin misiniz?')) return;
     this.Hisses = this.Hisses.filter((hisse: any) => hisse.id != id);

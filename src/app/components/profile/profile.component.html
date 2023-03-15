@@ -2,31 +2,17 @@
   <div class="col-md-8">
     <div class="card text-white bg-dark">
       <div class="card-header p-1">Yorumlarım</div>
-      <div class="card-body p-0">
-        <table class="table table-bordered table-striped table-hover">
-          <tbody *ngIf="comments.length > 0">
-            <tr *ngFor="let comment of comments">
-              <td>
-                <img
-                  [src]="comment.Picture"
-                  alt=""
-                  style="width: 29px; margin-right: 3px"
-                />
-                {{ comment.NameSurname }}
-              </td>
-              <td>{{ comment.Code }}</td>
-              <td>{{ comment.Content }}</td>
-              <td class="text-end">
-                {{ moment(comment.DateTime).format("LLLL") }}
-              </td>
-            </tr>
-          </tbody>
-          <tbody *ngIf="!(comments.length > 0)">
-            <tr>
-              <td class="text-center p-5">Henüz hiç yorum yapılmamış.</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="card-body p-1">
+        <div *ngIf="comments.length > 0">
+          <div
+            app-comment-row
+            *ngFor="let comment of comments"
+            [comment]="comment"
+          ></div>
+        </div>
+        <div *ngIf="!(comments.length > 0)">
+          <div class="text-center p-5">Henüz hiç yorum yapılmamış.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -37,7 +23,7 @@
         <div class="form-group">
           <label>Profil Resmi</label>
           <div>
-            <img [src]="authService.Get().photoUrl" alt="" />
+            <img [src]="authService.Get().photoUrl" class="avatar" />
           </div>
         </div>
         <div class="form-group">

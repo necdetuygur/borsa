@@ -1,2 +1,21 @@
+<h1>
+  {{ detail.Code }}
+  <span> {{ detail.fiyat }}₺ </span>
+  <span
+    [ngClass]="
+      detail.yuzde.indexOf('+') > -1
+        ? 'text-success'
+        : detail.yuzde.indexOf('-') > -1
+        ? 'text-danger'
+        : ''
+    "
+  >
+    {{ detail.yuzde }}
+  </span>
+</h1>
+<div>
+  {{ detail.Title }}
+  <b>({{ detail.City }})</b>
+</div>
 <app-tradingview [code]="code"></app-tradingview>
 <app-comment [code]="code"></app-comment>

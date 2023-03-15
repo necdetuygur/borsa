@@ -3,3 +3,7 @@
   font-size: 12px !important;
   line-height: 1.5 !important;
 }
+
+.avatar {
+  border-radius: 50%;
+}

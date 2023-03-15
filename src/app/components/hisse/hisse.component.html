@@ -1,8 +1,8 @@
 <div class="table-responsive">
-  <table class="table table-bordered table-striped table-hover">
-    <tbody>
+  <table class="table table-bordered table-striped table-hover table-sm">
+    <thead>
       <tr>
-        <td colspan="9">
+        <th scope="col" colspan="9">
           <div class="d-flex justify-content-between">
             <b>Portföy</b>
             <div class="d-flex justify-content-end">
@@ -20,24 +20,30 @@
               />
             </div>
           </div>
-        </td>
+        </th>
       </tr>
       <tr *ngIf="portfolioService.Hisses.length > 0">
-        <td style="width: 26%">Hisse</td>
-        <td style="width: 22%">Fiyat</td>
-        <td style="width: 22%">Değişim</td>
-        <td style="width: 30%" class="text-end">İşlem</td>
+        <th scope="col" style="width: 26%">Hisse</th>
+        <th scope="col" style="width: 22%">Fiyat</th>
+        <th scope="col" style="width: 22%">Değişim</th>
+        <th scope="col" style="width: 30%" class="text-end">İşlem</th>
       </tr>
+    </thead>
+    <tbody>
       <ng-container *ngIf="portfolioService.Hisses.length > 0">
-        <tr *ngFor="let hisse of portfolioService.Hisses">
-          <td>
+        <tr
+          *ngFor="let hisse of portfolioService.Hisses"
+          style="cursor: pointer"
+        >
+          <td [routerLink]="'/detail/' + hisse.kod">
             {{ hisse.kod }}
           </td>
-          <td>
+          <td [routerLink]="'/detail/' + hisse.kod">
             {{ hisse.fiyat }}
             <app-loading *ngIf="portfolioService.Loading"></app-loading>
           </td>
           <td
+            [routerLink]="'/detail/' + hisse.kod"
             [ngClass]="
               hisse.yuzde.indexOf('+') > -1
                 ? 'text-success'
@@ -72,53 +78,49 @@
       </tr>
     </tbody>
   </table>
+</div>
 
-  <div class="modal fade" tabindex="-1" id="modalAktar">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">{{ aktar }} Aktar</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body m-0 p-0">
-          <textarea
-            id="aktarDataTxt"
-            [value]="aktarData"
-            class="form-control w-100"
-            style="height: 330px"
-            [readOnly]="aktar == 'Dışa'"
-          ></textarea>
-        </div>
-        <div class="modal-footer">
-          <button
-            *ngIf="aktar == 'Dışa'"
-            type="button"
-            class="btn btn-primary"
-            (click)="aktarDataKopyala()"
-          >
-            Kopyala
-          </button>
-          <button
-            *ngIf="aktar == 'İçe'"
-            type="button"
-            class="btn btn-primary"
-            (click)="iceAktarmaBaslat()"
-          >
-            İçe Aktar
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Kapat
-          </button>
-        </div>
+<div class="modal fade" tabindex="-1" id="modalAktar">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ aktar }} Aktar</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body m-0 p-0">
+        <textarea
+          id="aktarDataTxt"
+          [value]="aktarData"
+          class="form-control w-100"
+          style="height: 330px"
+          [readOnly]="aktar == 'Dışa'"
+        ></textarea>
+      </div>
+      <div class="modal-footer">
+        <button
+          *ngIf="aktar == 'Dışa'"
+          type="button"
+          class="btn btn-primary"
+          (click)="aktarDataKopyala()"
+        >
+          Kopyala
+        </button>
+        <button
+          *ngIf="aktar == 'İçe'"
+          type="button"
+          class="btn btn-primary"
+          (click)="iceAktarmaBaslat()"
+        >
+          İçe Aktar
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Kapat
+        </button>
       </div>
     </div>
   </div>

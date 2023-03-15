@@ -20,6 +20,7 @@ import { FilterBistDataPipe } from './pipes/filter-bist-data.pipe';
 import { MyCommentsComponent } from './components/my-comments/my-comments.component';
 import { HisseComponent } from './components/hisse/hisse.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { CommentRowComponent } from './components/comment-row/comment-row.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     MyCommentsComponent,
     HisseComponent,
     LoadingComponent,
+    CommentRowComponent,
   ],
   imports: [
     BrowserModule,
