@@ -1,33 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DetailComponent } from './components/detail/detail.component';
+import { GoogleLoginComponent } from './components/google-login/google-login.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    loadChildren: () =>
-      import('./components/home/home.component').then((m) => m.HomeComponent),
-  },
-  {
-    path: 'profile',
-    loadChildren: () =>
-      import('./components/profile/profile.component').then(
-        (m) => m.ProfileComponent
-      ),
-  },
-  {
-    path: 'login',
-    loadChildren: () =>
-      import('./components/google-login/google-login.component').then(
-        (m) => m.GoogleLoginComponent
-      ),
-  },
-  {
-    path: 'detail/:code',
-    loadChildren: () =>
-      import('./components/detail/detail.component').then(
-        (m) => m.DetailComponent
-      ),
-  },
+  { path: '', component: HomeComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'login', component: GoogleLoginComponent },
+  { path: 'detail/:code', component: DetailComponent },
 ];
 
 @NgModule({
