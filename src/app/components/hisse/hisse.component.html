@@ -1,0 +1,125 @@
+<div class="table-responsive">
+  <table class="table table-bordered table-striped table-hover">
+    <tbody>
+      <tr>
+        <td colspan="9">
+          <div class="d-flex justify-content-between">
+            <b>Portföy</b>
+            <div class="d-flex justify-content-end">
+              <input
+                type="button"
+                value="Dışa Aktar"
+                class="btn btn-xs btn-secondary"
+                (click)="disaAktar()"
+              />
+              <input
+                type="button"
+                value="İçe Aktar"
+                class="btn btn-xs btn-secondary"
+                (click)="iceAktar()"
+              />
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="portfolioService.Hisses.length > 0">
+        <td style="width: 26%">Hisse</td>
+        <td style="width: 22%">Fiyat</td>
+        <td style="width: 22%">Değişim</td>
+        <td style="width: 30%" class="text-end">İşlem</td>
+      </tr>
+      <ng-container *ngIf="portfolioService.Hisses.length > 0">
+        <tr *ngFor="let hisse of portfolioService.Hisses">
+          <td>
+            {{ hisse.kod }}
+          </td>
+          <td>
+            {{ hisse.fiyat }}
+            <app-loading *ngIf="portfolioService.Loading"></app-loading>
+          </td>
+          <td
+            [ngClass]="
+              hisse.yuzde.indexOf('+') > -1
+                ? 'text-success'
+                : hisse.yuzde.indexOf('-') > -1
+                ? 'text-danger'
+                : ''
+            "
+          >
+            <b>{{ hisse.yuzde }}</b>
+            <app-loading *ngIf="portfolioService.Loading"></app-loading>
+          </td>
+          <td class="text-end">
+            <input
+              type="button"
+              class="btn btn-xs btn-danger"
+              value="Sil"
+              (click)="portfolioService.Remove(hisse.id)"
+            />
+          </td>
+        </tr>
+      </ng-container>
+      <tr *ngIf="portfolioService.Hisses.length < 1">
+        <td colspan="9" class="text-center">
+          <div>
+            <b>
+              Portföyünüzde henüz takip ettiğiniz hisse senedi bulunmamaktadır.
+            </b>
+          </div>
+          Görüntülemek istediğiniz hisse senedi fiyatı için, hisse senedi kodu
+          girip "Portföye Ekle" butonuna basınız.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="modal fade" tabindex="-1" id="modalAktar">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ aktar }} Aktar</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body m-0 p-0">
+          <textarea
+            id="aktarDataTxt"
+            [value]="aktarData"
+            class="form-control w-100"
+            style="height: 330px"
+            [readOnly]="aktar == 'Dışa'"
+          ></textarea>
+        </div>
+        <div class="modal-footer">
+          <button
+            *ngIf="aktar == 'Dışa'"
+            type="button"
+            class="btn btn-primary"
+            (click)="aktarDataKopyala()"
+          >
+            Kopyala
+          </button>
+          <button
+            *ngIf="aktar == 'İçe'"
+            type="button"
+            class="btn btn-primary"
+            (click)="iceAktarmaBaslat()"
+          >
+            İçe Aktar
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Kapat
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

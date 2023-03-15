@@ -1,3 +1,4 @@
+<app-hisse></app-hisse>
 <div class="input-group mt-2 mb-2">
   <span class="input-group-text">Ara</span>
   <input
@@ -14,17 +15,26 @@
         <th scope="col">Kod</th>
         <th scope="col">Unvan</th>
         <th scope="col">Şehir</th>
+        <th scope="col">İşlem</th>
       </tr>
     </thead>
     <tbody>
       <tr
         style="cursor: pointer"
         *ngFor="let item of bistService.Data | filterBistData : f1"
-        [routerLink]="'/detail/' + item.Code"
       >
-        <td>{{ item.Code }}</td>
-        <td>{{ item.Title }}</td>
-        <td>{{ item.City }}</td>
+        <td [routerLink]="'/detail/' + item.Code">{{ item.Code }}</td>
+        <td [routerLink]="'/detail/' + item.Code">{{ item.Title }}</td>
+        <td [routerLink]="'/detail/' + item.Code">{{ item.City }}</td>
+        <td>
+          <b
+            class="btn btn-success btn-sm"
+            (click)="addPort(item.Code)"
+            *ngIf="isAddPort(item.Code)"
+          >
+            Portföye Ekle
+          </b>
+        </td>
       </tr>
     </tbody>
   </table>

@@ -18,6 +18,8 @@ import { DetailComponent } from './components/detail/detail.component';
 import { TradingviewComponent } from './components/tradingview/tradingview.component';
 import { FilterBistDataPipe } from './pipes/filter-bist-data.pipe';
 import { MyCommentsComponent } from './components/my-comments/my-comments.component';
+import { HisseComponent } from './components/hisse/hisse.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { MyCommentsComponent } from './components/my-comments/my-comments.compon
     TradingviewComponent,
     FilterBistDataPipe,
     MyCommentsComponent,
+    HisseComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
