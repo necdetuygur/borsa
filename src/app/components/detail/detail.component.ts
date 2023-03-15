@@ -10,6 +10,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./detail.component.css'],
 })
 export class DetailComponent {
+  loaded = false;
   code = '';
   detail: any;
   constructor(
@@ -28,5 +29,6 @@ export class DetailComponent {
       ...this.detail,
       ...price,
     };
+    this.loaded = true;
   }
 }

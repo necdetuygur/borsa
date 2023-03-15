@@ -1,4 +1,7 @@
-<h1>
+<div *ngIf="!loaded" class="text-center m-5">
+  <app-loading [size]="32"></app-loading>
+</div>
+<h1 *ngIf="loaded">
   {{ detail.Code }}
   <span> {{ detail.fiyat }}₺ </span>
   <span
@@ -13,9 +16,9 @@
     {{ detail.yuzde }}
   </span>
 </h1>
-<div>
+<div *ngIf="loaded">
   {{ detail.Title }}
   <b>({{ detail.City }})</b>
 </div>
-<app-tradingview [code]="code"></app-tradingview>
-<app-comment [code]="code"></app-comment>
+<app-tradingview [code]="code" *ngIf="loaded"></app-tradingview>
+<app-comment [code]="code" *ngIf="loaded"></app-comment>

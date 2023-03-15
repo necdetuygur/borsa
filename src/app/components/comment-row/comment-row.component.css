@@ -1,8 +1,9 @@
 .comment {
-  margin-bottom: 15px;
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid #ffffff44;
+  margin: 5px 0 5px 0;
+  padding: 1px 0 10px 0;
+  border-bottom: 1px dotted #ffffff22;
 }
 
 .comment .avatar {
@@ -13,7 +14,6 @@
 .comment .right {
   display: flex;
   flex-direction: column;
-  align-items: start;
   padding: 0 5px 0 5px;
   width: 100%;
 }
@@ -28,7 +28,15 @@
 
 .comment .right .top .time {
   opacity: 0.75;
-  font-size: 0.75em;
+  font-size: 0.65em;
   flex: 1;
   text-align: right;
+}
+
+.comment .bottom .content .code {
+  padding: 1px;
+  border: 1px solid #ffffff22;
+  background-color: #ffffff11;
+  border-radius: 3px;
+  opacity: 0.75;
 }
