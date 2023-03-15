@@ -1,8 +1,8 @@
 {
-  "name": "borsa",
-  "short_name": "borsa",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Borsa",
+  "short_name": "Borsa",
+  "theme_color": "#112233",
+  "background_color": "#112233",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
