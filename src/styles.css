@@ -3,6 +3,10 @@ body {
   transition: opacity 1s linear;
 }
 
+.navbar-brand {
+  font-weight: 900;
+}
+
 .btn-xs {
   padding: 1px 5px !important;
   font-size: 12px !important;
