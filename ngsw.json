@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1678987438566,
+  "timestamp": 1678988098872,
   "index": "https://necdetuygur.github.io/borsa/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "https://necdetuygur.github.io/borsa/favicon.ico",
         "https://necdetuygur.github.io/borsa/index.html",
-        "https://necdetuygur.github.io/borsa/main.366bfcccab46b316.js",
+        "https://necdetuygur.github.io/borsa/main.5f9556fd99613422.js",
         "https://necdetuygur.github.io/borsa/manifest.webmanifest",
         "https://necdetuygur.github.io/borsa/polyfills.8c8b815344061a91.js",
         "https://necdetuygur.github.io/borsa/runtime.ce85c8f10a74178d.js",
         "https://necdetuygur.github.io/borsa/scripts.6386dd8f07893a30.js",
-        "https://necdetuygur.github.io/borsa/styles.2ba1d29b5bd27a34.css"
+        "https://necdetuygur.github.io/borsa/styles.85ff4887ed234cc2.css"
       ],
       "patterns": []
     },
@@ -57,13 +57,13 @@
     "https://necdetuygur.github.io/borsa/assets/icons/icon-96x96.png": "7f84174cd6edad5e82d1c0c7163a7af44e979966",
     "https://necdetuygur.github.io/borsa/assets/loading.gif": "1999e2d42b91ef83fbfd19e29b6e7dd4d612a1d3",
     "https://necdetuygur.github.io/borsa/favicon.ico": "1afa9f25cb81f1193a7f6c85d0c3c4f221fd2960",
-    "https://necdetuygur.github.io/borsa/index.html": "1d5fa35db9de98224ad2c3783f85b05dca98e01d",
-    "https://necdetuygur.github.io/borsa/main.366bfcccab46b316.js": "ccc356ab904ffa0040a7f27b023f0134d2f4f9f5",
+    "https://necdetuygur.github.io/borsa/index.html": "898ee705cad1ed85770dc7fbd92bf32b131efaf2",
+    "https://necdetuygur.github.io/borsa/main.5f9556fd99613422.js": "6128919334b45281adef4285ce006f3d48fb410f",
     "https://necdetuygur.github.io/borsa/manifest.webmanifest": "a721697eb43e551e8521057a4141d49b5e07891c",
     "https://necdetuygur.github.io/borsa/polyfills.8c8b815344061a91.js": "e8b365b2890106ca5fed4defd2d6ee7ebbfad632",
     "https://necdetuygur.github.io/borsa/runtime.ce85c8f10a74178d.js": "a07e8ac0c94c2a4f1ca94532ce134005960c8545",
     "https://necdetuygur.github.io/borsa/scripts.6386dd8f07893a30.js": "33db49da47bbb73a7d4079f4ec8d9f92d374edc9",
-    "https://necdetuygur.github.io/borsa/styles.2ba1d29b5bd27a34.css": "013a3d93a975b8d8d875924eda6bba5ebdf10fd2"
+    "https://necdetuygur.github.io/borsa/styles.85ff4887ed234cc2.css": "ba7c1933e07b1ae1d2b80567f60ea539593793c1"
   },
   "navigationUrls": [
     {
