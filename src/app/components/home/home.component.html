@@ -16,7 +16,7 @@
         style="cursor: pointer"
         *ngFor="let item of bistService.Data | filterBistData : f1"
       >
-        <td [routerLink]="'/detail/' + item.Code">
+        <td [routerLink]="'/detail/' + item.Code" class="w-75">
           <div>
             <b>
               {{ item.Code }}
@@ -25,9 +25,9 @@
           </div>
           {{ item.Title }}
         </td>
-        <td class="text-end">
+        <td class="w-25 align-middle">
           <b
-            class="btn btn-success btn-xs"
+            class="btn btn-success btn-xs float-end"
             (click)="addPort(item.Code)"
             *ngIf="isAddPort(item.Code)"
           >
