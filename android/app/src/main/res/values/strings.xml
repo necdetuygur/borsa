@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Borsa</string>
+    <string name="title_activity_main">Borsa</string>
+    <string name="package_name">com.necdetuygur.borsa</string>
+    <string name="custom_url_scheme">com.necdetuygur.borsa</string>
+</resources>
