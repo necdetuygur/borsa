@@ -4,4 +4,5 @@
     <string name="title_activity_main">Borsa</string>
     <string name="package_name">com.necdetuygur.borsa</string>
     <string name="custom_url_scheme">com.necdetuygur.borsa</string>
+    <string name="admob_app_id">ca-app-pub-1862541363203489~3122615455</string>
 </resources>

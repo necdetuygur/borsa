@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity
+      <meta-data
+        android:name="com.google.android.gms.ads.APPLICATION_ID"
+        android:value="@string/admob_app_id"/>
+
+      <activity
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
             android:name="com.necdetuygur.borsa.MainActivity"
             android:label="@string/title_activity_main"

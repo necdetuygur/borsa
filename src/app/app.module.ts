@@ -50,7 +50,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
+      registrationStrategy: 'registerWhenStable:30000',
     }),
   ],
   providers: [
@@ -62,7 +62,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '643383346665-2inr5rbhle9ggscmvtvcgp6pl48aof3m.apps.googleusercontent.com'
+              // '643383346665-2inr5rbhle9ggscmvtvcgp6pl48aof3m.apps.googleusercontent.com' // Web
+              '643383346665-g48jiq86fgl5g2djtl9mig7tu5hc8hrd.apps.googleusercontent.com' // Mobile
             ),
           },
         ],
