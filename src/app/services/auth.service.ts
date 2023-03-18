@@ -1,13 +1,11 @@
-import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { Injectable } from '@angular/core';
-
 import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  empty: SocialUser = {
+  empty: any = {
     email: '',
     provider: '',
     id: '',
@@ -20,17 +18,14 @@ export class AuthService {
     authorizationCode: '',
     response: undefined,
   };
-  private user: SocialUser = JSON.parse(
+  private user: any = JSON.parse(
     localStorage.getItem('user') || JSON.stringify(this.empty)
   );
-  constructor(
-    private router: Router,
-    private socialAuthService: SocialAuthService
-  ) {}
-  Get(): SocialUser {
+  constructor(private router: Router) {}
+  Get(): any {
     return this.user;
   }
-  Set(user: SocialUser) {
+  Set(user: any) {
     if (user !== null && user !== undefined) {
       this.user = user;
       localStorage.setItem('user', JSON.stringify(user));
@@ -40,7 +35,6 @@ export class AuthService {
   }
   LogOut() {
     this.Set(this.empty);
-    this.socialAuthService.signOut();
     this.router.navigateByUrl('/login');
   }
 }

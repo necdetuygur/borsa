@@ -1,6 +1,7 @@
 body {
   opacity: 0;
   transition: opacity 1s linear;
+  padding-bottom: 53px !important;
 }
 
 .navbar-brand {
@@ -15,8 +16,4 @@ body {
 
 .avatar {
   border-radius: 50%;
-}
-
-.reklam-bosluk {
-  padding-bottom: 53px;
 }

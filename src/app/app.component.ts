@@ -20,7 +20,6 @@ export class AppComponent {
   }
 
   async ngOnInit() {
-    alert(window.location.href);
     const deviceInfo = await Device.getInfo();
     if (deviceInfo.platform !== 'web') {
       AdMob.initialize({

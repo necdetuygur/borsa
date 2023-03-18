@@ -5,4 +5,5 @@
     <string name="package_name">com.necdetuygur.borsa</string>
     <string name="custom_url_scheme">com.necdetuygur.borsa</string>
     <string name="admob_app_id">ca-app-pub-1862541363203489~3122615455</string>
+    <string name="server_client_id">643383346665-2inr5rbhle9ggscmvtvcgp6pl48aof3m.apps.googleusercontent.com</string>
 </resources>

@@ -1,5 +1,8 @@
 <div class="container-fluid mt-4 text-center">
   <div *ngIf="!(authService.Get().email !== '')" style="color-scheme: light">
-    <asl-google-signin-button type="standard"></asl-google-signin-button>
+    <!-- <asl-google-signin-button type="standard"></asl-google-signin-button> -->
+    <button class="btn btn-primary" (click)="googleSignIn()">
+      Google ile giriş yap
+    </button>
   </div>
 </div>
