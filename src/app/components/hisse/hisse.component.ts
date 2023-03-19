@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Share } from '@capacitor/share';
 import * as bootstrap from 'bootstrap';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
@@ -16,12 +17,16 @@ export class HisseComponent {
     this.modalAktar = new bootstrap.Modal('#modalAktar');
     this.portfolioService.GetPrices();
   }
-  disaAktar() {
+  async disaAktar() {
     this.aktarData = this.portfolioService.Hisses.map((hisse: any) => hisse.kod)
       .join('\n')
       .trim();
     this.aktar = 'Dışa';
     this.modalAktar.show();
+
+    await Share.share({
+      text: this.aktarData,
+    });
   }
   iceAktar() {
     this.aktarData = '';
