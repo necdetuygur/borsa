@@ -60,6 +60,7 @@
             <app-loading *ngIf="portfolioService.Loading"></app-loading>
           </td>
           <td
+            [routerLink]="'/detail/' + hisse.kod"
             [ngClass]="
               hisse.oneri.indexOf('AL') > -1
                 ? 'text-success'
@@ -73,15 +74,15 @@
             {{ hisse.oneri | customClear }}
             <app-loading *ngIf="portfolioService.Loading"></app-loading>
           </td>
-          <td>
+          <td [routerLink]="'/detail/' + hisse.kod">
             {{ hisse.hedef | customClear }}
             <app-loading *ngIf="portfolioService.Loading"></app-loading>
           </td>
-          <td>
+          <td [routerLink]="'/detail/' + hisse.kod">
             {{ hisse.fk }}
             <app-loading *ngIf="portfolioService.Loading"></app-loading>
           </td>
-          <td>
+          <td [routerLink]="'/detail/' + hisse.kod">
             {{ hisse.pddd }}
             <app-loading *ngIf="portfolioService.Loading"></app-loading>
           </td>
