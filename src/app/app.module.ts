@@ -17,6 +17,7 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { CommentRowComponent } from './components/comment-row/comment-row.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { CustomClearPipe } from './pipes/custom-clear.pipe';
+import { SrbComponent } from './components/srb/srb.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { CustomClearPipe } from './pipes/custom-clear.pipe';
     LoadingComponent,
     CommentRowComponent,
     CustomClearPipe,
+    SrbComponent,
   ],
   imports: [
     BrowserModule,

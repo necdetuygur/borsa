@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/">Borsa</a>
+    <a class="navbar-brand" routerLink="/">
+      {{ router.url === "/" ? "Borsa" : "&larr;" }}
+    </a>
     <div class="d-flex">
       <div class="nav-item dropdown" *ngIf="authService.Get().email !== ''">
         <a

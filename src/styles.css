@@ -17,3 +17,7 @@ body {
 .avatar {
   border-radius: 50%;
 }
+
+.modal {
+  height: 85% !important;
+}

@@ -6,7 +6,7 @@
   <span> {{ detail.fiyat }}₺ </span>
   <span
     [ngClass]="
-      detail.yuzde.indexOf('+') > -1
+      !(detail.yuzde.indexOf('-') > -1)
         ? 'text-success'
         : detail.yuzde.indexOf('-') > -1
         ? 'text-danger'
@@ -19,6 +19,24 @@
 <div *ngIf="loaded">
   {{ detail.Title }}
   <b>({{ detail.City }})</b>
+</div>
+<div *ngIf="loaded">
+  <table class="table table-bordered table-striped table-hover table-sm">
+    <tbody>
+      <tr class="table-dark">
+        <th scope="col">Öneri</th>
+        <th scope="col">Hedef</th>
+        <th scope="col">F/K</th>
+        <th scope="col">PD/DD</th>
+      </tr>
+      <tr class="table-dark">
+        <td>{{ detail.oneri | customClear }}</td>
+        <td>{{ detail.hedef | customClear }}</td>
+        <td>{{ detail.fk }}</td>
+        <td>{{ detail.pddd }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 <app-tradingview [code]="code" *ngIf="loaded"></app-tradingview>
 <app-comment [code]="code" *ngIf="loaded"></app-comment>
