@@ -22,11 +22,15 @@
           </div>
         </th>
       </tr>
-      <tr *ngIf="portfolioService.Hisses.length > 0">
-        <th scope="col" style="width: 26%">Hisse</th>
-        <th scope="col" style="width: 22%">Fiyat</th>
-        <th scope="col" style="width: 22%">Değişim</th>
-        <th scope="col" style="width: 30%" class="text-end">İşlem</th>
+      <tr *ngIf="portfolioService.Hisses.length > 0" style="font-size: 0.75em">
+        <th scope="col">Hisse</th>
+        <th scope="col">Fiyat</th>
+        <th scope="col">Değişim</th>
+        <th scope="col">Öneri</th>
+        <th scope="col">Hedef</th>
+        <th scope="col">F/K</th>
+        <th scope="col">PD/DD</th>
+        <th scope="col" class="text-end">İşlem</th>
       </tr>
     </thead>
     <tbody>
@@ -45,7 +49,7 @@
           <td
             [routerLink]="'/detail/' + hisse.kod"
             [ngClass]="
-              hisse.yuzde.indexOf('+') > -1
+              !(hisse.yuzde.indexOf('-') > -1)
                 ? 'text-success'
                 : hisse.yuzde.indexOf('-') > -1
                 ? 'text-danger'
@@ -53,6 +57,32 @@
             "
           >
             <b>{{ hisse.yuzde }}</b>
+            <app-loading *ngIf="portfolioService.Loading"></app-loading>
+          </td>
+          <td
+            [ngClass]="
+              hisse.oneri.indexOf('AL') > -1
+                ? 'text-success'
+                : hisse.oneri.indexOf('SAT') > -1
+                ? 'text-danger'
+                : hisse.oneri.indexOf('TUT') > -1
+                ? 'text-warning'
+                : ''
+            "
+          >
+            {{ hisse.oneri | customClear }}
+            <app-loading *ngIf="portfolioService.Loading"></app-loading>
+          </td>
+          <td>
+            {{ hisse.hedef | customClear }}
+            <app-loading *ngIf="portfolioService.Loading"></app-loading>
+          </td>
+          <td>
+            {{ hisse.fk }}
+            <app-loading *ngIf="portfolioService.Loading"></app-loading>
+          </td>
+          <td>
+            {{ hisse.pddd }}
             <app-loading *ngIf="portfolioService.Loading"></app-loading>
           </td>
           <td class="text-end">

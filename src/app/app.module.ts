@@ -16,6 +16,7 @@ import { HisseComponent } from './components/hisse/hisse.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { CommentRowComponent } from './components/comment-row/comment-row.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { CustomClearPipe } from './pipes/custom-clear.pipe';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     HisseComponent,
     LoadingComponent,
     CommentRowComponent,
+    CustomClearPipe,
   ],
   imports: [
     BrowserModule,

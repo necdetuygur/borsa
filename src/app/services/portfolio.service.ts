@@ -35,13 +35,17 @@ export class PortfolioService {
     this.Loading = true;
     let gets: any[] = [];
     this.Hisses.forEach(async (hisse: any) => {
-      gets.push(axios.get('https://hisse.vercel.app/?q=' + hisse.kod));
+      gets.push(axios.get('https://hisse.vercel.app/?t=i&q=' + hisse.kod));
     });
     Promise.all(gets).then((datas: any[]) => {
       this.Hisses.forEach((hisse: any, index: number) => {
         const data = ('' + datas[index].data).replace('.', ',').split('|');
         hisse.fiyat = data[0];
         hisse.yuzde = data[1];
+        hisse.oneri = data[2];
+        hisse.hedef = data[3];
+        hisse.fk = data[4];
+        hisse.pddd = data[5];
       });
       this.Loading = false;
       localStorage.setItem('Hisse', JSON.stringify(this.Hisses));
@@ -51,12 +55,16 @@ export class PortfolioService {
   public async GetPrice(kod: string) {
     const data = (
       await (
-        await axios.get('https://hisse.vercel.app/?q=' + kod)
+        await axios.get('https://hisse.vercel.app/?t=i&q=' + kod)
       ).data
     ).split('|');
     return {
       fiyat: data[0],
       yuzde: data[1],
+      oneri: data[2],
+      hedef: data[3],
+      fk: data[4],
+      pddd: data[5],
     };
   }
 
