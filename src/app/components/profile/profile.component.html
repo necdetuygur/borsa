@@ -1,22 +1,5 @@
 <div *ngIf="authService.Get().email !== ''" class="row mt-2">
-  <div class="col-md-8">
-    <div class="card text-white bg-dark">
-      <div class="card-header p-1">Yorumlarım</div>
-      <div class="card-body p-1">
-        <div *ngIf="comments.length > 0">
-          <div
-            app-comment-row
-            *ngFor="let comment of comments"
-            [comment]="comment"
-          ></div>
-        </div>
-        <div *ngIf="!(comments.length > 0)">
-          <div class="text-center p-5">Henüz hiç yorum yapılmamış.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
+  <div class="col-md-4 mb-2">
     <div class="card text-white bg-dark">
       <div class="card-header p-1">Profil Bilgileri</div>
       <div class="card-body p-1">
@@ -59,6 +42,32 @@
             id="email"
             readonly
           />
+        </div>
+        <div class="form-group mb-2">
+          <a
+            style="cursor: pointer"
+            class="btn btn-danger w-100"
+            (click)="authService.LogOut()"
+          >
+            Çıkış Yap
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 mb-2">
+    <div class="card text-white bg-dark">
+      <div class="card-header p-1">Yorumlarım</div>
+      <div class="card-body p-1">
+        <div *ngIf="comments.length > 0">
+          <div
+            app-comment-row
+            *ngFor="let comment of comments"
+            [comment]="comment"
+          ></div>
+        </div>
+        <div *ngIf="!(comments.length > 0)">
+          <div class="text-center p-5">Henüz hiç yorum yapılmamış.</div>
         </div>
       </div>
     </div>
