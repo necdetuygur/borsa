@@ -25,12 +25,9 @@
             ],
             "styles": ["src/superhero.css", "src/styles.css"],
             "scripts": [
-              "node_modules/popper.js/dist/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ],
-            "allowedCommonJsDependencies": [
-              "moment"
-            ],
+            "allowedCommonJsDependencies": ["moment"],
             "serviceWorker": true,
             "ngswConfigPath": "ngsw-config.json"
           },
@@ -90,7 +87,9 @@
               "src/manifest.webmanifest"
             ],
             "styles": ["src/superhero.css", "src/styles.css"],
-            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           }
         }
       }
