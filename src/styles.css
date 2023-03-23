@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
+
 body {
+  font-family: Cairo, Roboto, sans-serif !important;
   opacity: 0;
   transition: opacity 1s linear;
   padding-bottom: 53px !important;
