@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { GoogleAuth } from '@codetrix-studio/capacitor-google-auth';
-import jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'app-google-login',
@@ -22,12 +21,11 @@ export class GoogleLoginComponent {
 
   async googleSignIn() {
     let googleUser = await GoogleAuth.signIn();
-    const t: any = jwt_decode(googleUser.authentication.idToken);
     let u: any = {};
-    u.email = t.email;
-    u.photoUrl = t.picture;
-    u.firstName = t.given_name;
-    u.lastName = t.family_name;
+    u.email = googleUser.email;
+    u.photoUrl = googleUser.imageUrl;
+    u.firstName = googleUser.givenName;
+    u.lastName = googleUser.familyName;
     this.authService.Set(u);
     if (this.authService.Get().email !== '') {
       this.router.navigateByUrl('/profile');
