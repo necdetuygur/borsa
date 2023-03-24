@@ -37,3 +37,16 @@ git stash
 git checkout master
 git branch -D gh-pages
 ```
+
+
+## mobile
+```
+npm install @capacitor/core
+npm install @capacitor/cli
+npx cap init
+npm install @capacitor/android
+npx cap add android
+ng build
+npx cap sync
+npx cap open android
+```
