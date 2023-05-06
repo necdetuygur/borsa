@@ -1,0 +1,21 @@
+.w-100 {
+  width: 100%;
+}
+
+.fl {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ac {
+  font-weight: 300;
+  font-size: 0.7rem;
+}
+
+.tal {
+  text-align: left;
+}
