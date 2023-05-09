@@ -19,7 +19,13 @@
             "
             class="btn btn-primary mb-2 w-100 fl tal"
           >
-            <div class="p-1"><img [src]="uygulama.re" width="64" /></div>
+            <div class="p-1">
+              <img
+                [src]="uygulama.re"
+                width="64"
+                onerror="this.style.display='none'"
+              />
+            </div>
             <div class="p-1">
               {{ uygulama.ad }}
               <div class="ac">{{ uygulama.ac }}</div>
