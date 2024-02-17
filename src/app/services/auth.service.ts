@@ -6,17 +6,9 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   empty: any = {
-    email: '',
-    provider: '',
-    id: '',
     name: '',
-    photoUrl: '',
-    firstName: '',
-    lastName: '',
-    authToken: '',
-    idToken: '',
-    authorizationCode: '',
-    response: undefined,
+    surname: '',
+    email: '',
   };
   private user: any = JSON.parse(
     localStorage.getItem('user') || JSON.stringify(this.empty)
@@ -36,5 +28,21 @@ export class AuthService {
   LogOut() {
     this.Set(this.empty);
     this.router.navigateByUrl('/login');
+  }
+
+  parseJwt(token: string) {
+    var base64Url = token.split('.')[1];
+    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    var jsonPayload = decodeURIComponent(
+      window
+        .atob(base64)
+        .split('')
+        .map(function (c) {
+          return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        })
+        .join('')
+    );
+
+    return JSON.parse(jsonPayload);
   }
 }
