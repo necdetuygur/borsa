@@ -1,6 +1,5 @@
-
 ## gh-pages
-```
+```sh
 git checkout -b gh-pages
 ng add angular-cli-ghpages
 ng deploy --base-href=https://necdetuygur.github.io/borsa/
@@ -9,9 +8,8 @@ git checkout master
 git branch -D gh-pages
 ```
 
-
 ## mobile
-```
+```sh
 npm install @capacitor/core
 npm install @capacitor/cli
 npx cap init
