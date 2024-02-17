@@ -23,7 +23,7 @@ npx cap open android
 ```
 
 ## autobuild
-```
+```sh
 
 vup
 vup
