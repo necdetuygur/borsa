@@ -1,7 +1,7 @@
 ## gh-pages
 ```sh
 git checkout -b gh-pages
-ng add angular-cli-ghpages
+ng add angular-cli-ghpages@1.0.6
 ng deploy --base-href=https://necdetuygur.github.io/borsa/
 git stash
 git checkout master
