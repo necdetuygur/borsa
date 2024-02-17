@@ -21,6 +21,7 @@ export class AuthService {
     if (user !== null && user !== undefined) {
       this.user = user;
       localStorage.setItem('user', JSON.stringify(user));
+      this.router.navigateByUrl('/profile');
     } else {
       localStorage.setItem('user', JSON.stringify(this.empty));
     }
