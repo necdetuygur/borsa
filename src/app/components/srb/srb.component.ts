@@ -7,6 +7,8 @@ import * as bootstrap from 'bootstrap';
   styleUrls: ['./srb.component.css'],
 })
 export class SrbComponent {
+  public uygulamaAdi = 'Altın Döviz Borsa Fiyatları';
+
   modalSrb: any;
   ngOnInit() {
     this.modalSrb = new bootstrap.Modal('#modalSrb');

@@ -18,7 +18,6 @@ import { CommentRowComponent } from './components/comment-row/comment-row.compon
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { CustomClearPipe } from './pipes/custom-clear.pipe';
 import { SrbComponent } from './components/srb/srb.component';
-import { UygulamalarComponent } from './components/uygulamalar/uygulamalar.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +36,6 @@ import { UygulamalarComponent } from './components/uygulamalar/uygulamalar.compo
     CommentRowComponent,
     CustomClearPipe,
     SrbComponent,
-    UygulamalarComponent,
   ],
   imports: [
     BrowserModule,

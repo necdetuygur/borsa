@@ -1,6 +1,19 @@
-<a href="javascript:void(0)" (click)="modalSrb.show()" class="m-3">
-  Sorumluluk Reddi Beyanı
-</a>
+<div class="text-center mt-5">
+  <a
+    href="javascript:void(0)"
+    (click)="modalSrb.show()"
+    class="btn btn-default"
+  >
+    Sorumluluk Reddi Beyanı
+  </a>
+  <a
+    target="_blank"
+    href="https://play.google.com/store/apps/developer?id=MeftunTech"
+    class="btn btn-default"
+  >
+    Diğer Uygulamalarımız
+  </a>
+</div>
 
 <div class="modal fade" tabindex="-1" id="modalSrb">
   <div class="modal-dialog modal-dialog-scrollable">
@@ -20,13 +33,14 @@
           sağlanmış olup alım satım amaçlı veya finansal, yatırım, vergi, yasal,
           muhasebe ya da diğer konularda tavsiye niteliğinde değildir. Lütfen
           her türlü alım satım işleminden önce fiyatları doğrulamak için aracı
-          kurumunuza veya mali temsilcinize danışın. "Borsa"; yatırım danışmanı,
-          mali danışman ya da hisse senedi aracısı değildir. Veri ve bilgilerin
-          hiçbiri, bir menkul kıymetin ya da finansal ürünün satın alınmasına,
-          satılmasına veya tutulmasına yönelik "Borsa" tarafından yapılan bir
-          yatırım tavsiyesi, teklif, öneri ya da talep değildir. "Borsa",
-          herhangi bir yatırımın tavsiye edilebilirliği veya uygunluğu konusunda
-          hiçbir taahhütte bulunmaz.
+          kurumunuza veya mali temsilcinize danışın. "{{ uygulamaAdi }}";
+          yatırım danışmanı, mali danışman ya da hisse senedi aracısı değildir.
+          Veri ve bilgilerin hiçbiri, bir menkul kıymetin ya da finansal ürünün
+          satın alınmasına, satılmasına veya tutulmasına yönelik "{{
+            uygulamaAdi
+          }}" tarafından yapılan bir yatırım tavsiyesi, teklif, öneri ya da
+          talep değildir. "{{ uygulamaAdi }}", herhangi bir yatırımın tavsiye
+          edilebilirliği veya uygunluğu konusunda hiçbir taahhütte bulunmaz.
         </p>
         <p>
           Veri ve bilgilerin hiçbiri, genel ya da özel yatırım tavsiyesi
@@ -35,29 +49,30 @@
           beklentilerinize uygun olmayabilir. Herhangi bir finansal ürün veya
           faaliyetin ilgi alanlarınıza, yatırım hedeflerinize, yatırım
           görüşünüze ve risk anlayışınıza göre size uygun olup olmadığını
-          değerlendirmek sizin sorumluluğunuzdadır. "Borsa", bu kapsamda atıfta
-          bulunulan finansal ürünlerle ilgili herhangi bir işlemden veya
-          yatırımdan kaynaklanan zararlardan sorumlu tutulamaz. "Borsa",
-          herhangi bir yatırım kararının yalnızca sağlanan veri ve bilgilere
-          dayanarak verilmesini önermez.
+          değerlendirmek sizin sorumluluğunuzdadır. "{{ uygulamaAdi }}", bu
+          kapsamda atıfta bulunulan finansal ürünlerle ilgili herhangi bir
+          işlemden veya yatırımdan kaynaklanan zararlardan sorumlu tutulamaz.
+          "{{ uygulamaAdi }}", herhangi bir yatırım kararının yalnızca sağlanan
+          veri ve bilgilere dayanarak verilmesini önermez.
         </p>
         <p>
           Veriler, finans borsaları ve diğer içerik sağlayıcıları tarafından
           sağlanmakta olup finans borsalarının veya diğer veri sağlayıcılarının
-          belirttiği şekilde gecikmeli olabilir. "Borsa" hiçbir veriyi
-          doğrulamaz ve bunu yapma yükümlülüğünü reddeder.
+          belirttiği şekilde gecikmeli olabilir. "{{ uygulamaAdi }}" hiçbir
+          veriyi doğrulamaz ve bunu yapma yükümlülüğünü reddeder.
         </p>
         <p>
-          "Borsa", veri veya içerik sağlayıcıları, finansal borsalar ve bağlı
-          kuruluşlarının her biri ile iş ortakları (A) herhangi bir verinin
-          doğru, yeterli veya eksiksiz olduğunu açık şekilde reddeder ve (B) bu
-          tür verilerdeki hatalardan, eksikliklerden veya diğer kusurlardan,
-          gecikmelerden, kesintilerden ya da bunlara dayanarak yapılan hiçbir
-          işlemden sorumlu tutulamaz. "Borsa" veya veri sağlayıcılarımız, burada
-          sunulan verileri kullanmanız nedeniyle oluşabilecek herhangi bir
-          zarardan sorumlu değildir. Burada kullanıldığı şekliyle "iş ortakları"
-          deyimi, "Borsa" ile bu taraflar arasındaki aracılık, ortaklık veya
-          ortak girişim ilişkisini ifade etmez.
+          "{{ uygulamaAdi }}", veri veya içerik sağlayıcıları, finansal borsalar
+          ve bağlı kuruluşlarının her biri ile iş ortakları (A) herhangi bir
+          verinin doğru, yeterli veya eksiksiz olduğunu açık şekilde reddeder ve
+          (B) bu tür verilerdeki hatalardan, eksikliklerden veya diğer
+          kusurlardan, gecikmelerden, kesintilerden ya da bunlara dayanarak
+          yapılan hiçbir işlemden sorumlu tutulamaz. "{{ uygulamaAdi }}" veya
+          veri sağlayıcılarımız, burada sunulan verileri kullanmanız nedeniyle
+          oluşabilecek herhangi bir zarardan sorumlu değildir. Burada
+          kullanıldığı şekliyle "iş ortakları" deyimi, "{{ uygulamaAdi }}" ile
+          bu taraflar arasındaki aracılık, ortaklık veya ortak girişim
+          ilişkisini ifade etmez.
         </p>
         <p>
           Burada bulunan hiçbir veri veya bilgi ile ilgili olarak önceden yazılı
@@ -68,7 +83,7 @@
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Tamam
         </button>
       </div>
