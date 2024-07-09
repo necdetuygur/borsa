@@ -1,6 +1,6 @@
 {
   "name": "borsa",
-  "version": "1.40.7",
+  "version": "1.40.8",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
