@@ -7,7 +7,7 @@ android {
         applicationId "com.necdetuygur.borsa"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 14011
+        versionCode 14012
         versionName "1.40.11"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
